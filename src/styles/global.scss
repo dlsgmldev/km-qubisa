@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./colors.scss";
+@import "./fonts.scss";
+
+.body-dark {
+  background-color: $neutral-black;
+  color: $neutral-white;
+
+  .text-white {
+    color: $neutral-white !important;
+  }
+
+  .text-black {
+    color: $neutral-black !important;
+  }
+
+  .bg-primary {
+    background-color: $primary-dark;
+  }
+
+  .bg-transperancy-100 {
+    background-color: $transperancy-100-dark;
+  }
+
+  .bg-transperancy-50 {
+    background-color: $transperancy-50-dark;
+  }
+
+  .bg-secondary-green {
+    background-color: $secondary-green;
+  }
+
+  .bg-secondary-yellow {
+    background-color: $secondary-yellow;
+  }
+
+  .bg-neutral-white {
+    background-color: $neutral-white;
+  }
+
+  .bg-neutral-black {
+    background-color: $neutral-black;
+  }
+
+  .text-primary {
+    color: $primary-dark;
+  }
+
+  .border-error {
+    border-color: $border-error-dark;
+  }
+
+  .border-default {
+    border-color: $border-default-dark;
+  }
+
+  .border-disable {
+    border-color: $border-disable-dark;
+  }
+  .datepicker {
+    width: 100%;
+  }
+}

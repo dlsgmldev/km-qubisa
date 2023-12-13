@@ -1,0 +1,96 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,500,600,700';
+
+$font-family: Montserrat, sans-serif;
+
+h1 {
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 49px;
+	font-family: $font-family;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 39px;
+	font-family: $font-family;
+}
+
+h3 {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 29px;
+	font-family: $font-family;
+}
+
+h4 {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 22px;
+	font-family: $font-family;
+}
+
+.subtitle-1 {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	font-family: $font-family;
+}
+
+.subtitle-2 {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+	font-family: $font-family;
+}
+
+.body-1 {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 20px;
+	font-family: $font-family;
+}
+
+.body-2 {
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	font-family: $font-family;
+}
+
+.body-3 {
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 16px;
+	font-family: $font-family;
+}
+
+.caption-1 {
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 16px;
+	font-family: $font-family;
+}
+
+.caption-2 {
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 15px;
+	font-style: normal;
+	text-decoration: none;
+	font-family: $font-family;
+}
+
+.overlines {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 15px;
+	font-family: $font-family;
+}
+
+.button {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+	font-family: $font-family;
+}
