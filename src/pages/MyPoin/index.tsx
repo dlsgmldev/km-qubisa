@@ -308,7 +308,7 @@ const MyPoin = () => {
                       type="file"
                       placeholder="Category*"
                       className="bg-black border text-white text-sm rounded w-full p-2.5"
-                      accept=".pdf, .mp4, .mp3"
+                      accept=".pdf, .mp4, .mp3, .mov, .MOV"
                       onChange={handleChangeFile}
                     />
                   )}

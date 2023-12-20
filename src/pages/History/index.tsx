@@ -181,6 +181,21 @@ const History = () => {
       });
   };
 
+  const viewContent = (idKm: number, link: string) => {
+    axios
+      .get(
+        `${process.env.REACT_APP_URL}qubisa/km/participant/view_content/${idKm}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
+      .then((res) => {
+        window.open(link, "_self");
+      });
+  };
+
   return (
     <div className="pt-5">
       <div className="px-4 flex">
@@ -279,23 +294,26 @@ const History = () => {
                       <p className="text-sm">{item.title}</p>
                       <p className="text-[10px] mt-1">{item.category}</p>
                       {item.link_external !== null && (
-                        <div className="my-3">
+                        <div className="my-2.5">
                           <i className="fa-solid fa-link text-[12px] me-2"></i>
-                          <a
-                            href={item.link_external}
-                            className="text-[10px] underline"
+                          <span
+                            onClick={() =>
+                              viewContent(item.id, item.link_external)
+                            }
+                            className="text-[10px] underline cursor-pointer"
                           >
                             {item.link_external.length > 40
                               ? `${item.link_external.substring(0, 40)}...`
                               : item.link_external}
-                          </a>
+                          </span>
                         </div>
                       )}
                       {item.file_url !== null && (
                         <div className="flex my-3">
-                          <a href={item.file_url}>
-                            <i className="fa-solid fa-file me-2 cursor-pointer"></i>
-                          </a>
+                          <i
+                            className="fa-solid fa-file-lines me-2 cursor-pointer text-purple-600"
+                            onClick={() => viewContent(item.id, item.file_url)}
+                          ></i>
                           <span className="text-[10px] my-auto">
                             {item.file_url.length > 40
                               ? `${item.file_url.substring(0, 40)}...`
@@ -419,7 +437,7 @@ const History = () => {
                       type="file"
                       placeholder="Category*"
                       className="bg-black border text-white text-sm rounded w-full p-2.5"
-                      accept=".jpg, .png, .mp4, .mp3"
+                      accept=".pdf, .mp4, .mp3, .mov, .MOV"
                       onChange={handleChangeFile}
                     />
                   )}
