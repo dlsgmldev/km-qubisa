@@ -297,9 +297,10 @@ const History = () => {
                         <div className="my-2.5">
                           <i className="fa-solid fa-link text-[12px] me-2"></i>
                           <span
-                            onClick={() =>
-                              viewContent(item.id, item.link_external)
-                            }
+                            onClick={() => {
+                              item.viewed += 1;
+                              viewContent(item.id, item.link_external);
+                            }}
                             className="text-[10px] underline cursor-pointer"
                           >
                             {item.link_external.length > 40
@@ -312,7 +313,10 @@ const History = () => {
                         <div className="flex my-3">
                           <i
                             className="fa-solid fa-file-lines me-2 cursor-pointer text-purple-600"
-                            onClick={() => viewContent(item.id, item.file_url)}
+                            onClick={() => {
+                              item.viewed += 1;
+                              viewContent(item.id, item.file_url);
+                            }}
                           ></i>
                           <span className="text-[10px] my-auto">
                             {item.file_url.length > 40
