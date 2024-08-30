@@ -203,7 +203,7 @@ const History = () => {
           className="fa-solid fa-chevron-left text-xl me-4 cursor-pointer"
           onClick={() => navigate(-1)}
         ></i> */}
-        <p className="my-auto text-xl font-bold">MKM</p>
+        <p className="my-auto text-xl font-bold">QShare</p>
       </div>
       <div className="flex justify-between px-4 mt-6">
         <input
@@ -403,7 +403,7 @@ const History = () => {
                     ×
                   </span>
                 </button>
-                <p className="text-xl font-bold text-center mb-3">Create MKM</p>
+                <p className="text-xl font-bold text-center mb-3">Create QShare</p>
                 <form className="p-4 gap-4 grid">
                   <input
                     type="text"
