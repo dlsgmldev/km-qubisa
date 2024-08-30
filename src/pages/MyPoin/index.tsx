@@ -223,7 +223,7 @@ const MyPoin = () => {
             next={fetchMoreData}
             hasMore={hasMore}
             height="100vh"
-            loader={<p className="text-center my-4">Loading...</p>}
+            loader={dataPoin.length == 0 ? (<p className="text-center my-4">No Data</p>) : (dataPoin.length > 7) ? (<p className="text-center my-4">Loading...</p>) : ''}
             endMessage={
               <p className="text-center my-4">No more data to load.</p>
             }
